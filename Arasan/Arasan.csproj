@@ -1,0 +1,275 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Reports\APProductionDailyReport.rdlc" />
+    <Content Remove="wwwroot\Reports\Basic.rdlc" />
+    <Content Remove="wwwroot\Reports\EnqReport.rdlc" />
+
+    <Content Remove="wwwroot\Reports\PyroReport.rdlc" />
+
+    <Content Remove="wwwroot\Reports\QuotationImportReport.rdlc" />
+    <Content Remove="wwwroot\Reports\QuotationReport.rdlc" />
+    <Content Remove="wwwroot\Reports\ReturnReport.rdlc" />
+    <Content Remove="wwwroot\Reports\SEqubasic.rdlc" />
+    <Content Remove="wwwroot\Reports\SQbasic.rdlc" />
+    <Content Remove="wwwroot\Reports\SubConDc.rdlc" />
+    <Content Remove="wwwroot\Reports\SubConMatDc.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Models\DataTransactions.cs~RF6bf757.TMP" />
+    <None Remove="Services\Production\euok0plw.tmv~" />
+    <None Remove="Views\Account\1agfobwd.bjs~" />
+    <None Remove="Views\APProductionentry\0xhmotfp.sma~" />
+    <None Remove="Views\QCFinalValueEntry\QCFinalValueEntry.cshtml~RF5db3da.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\Reports\Basic.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+    <None Include="Views\ProFormaInvoice\ListProFormaInvoice.cshtml" />
+    <None Include="Views\ProFormaInvoice\ProFormaInvoice.cshtml" />
+    <None Include="wwwroot\Reports\APProductionDailyReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\Reports\EnqReport.rdlc" />
+ 
+    <None Include="wwwroot\Reports\PyroReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+ 
+
+    <None Include="wwwroot\Reports\PyroReport.rdlc" />
+ 
+    <None Include="wwwroot\Reports\QuotationImportReport.rdlc" />
+    <None Include="wwwroot\Reports\QuotationReport.rdlc" />
+    <None Include="wwwroot\Reports\ReturnReport.rdlc" />
+    <None Include="wwwroot\Reports\SEqubasic.rdlc" />
+    <None Include="wwwroot\Reports\SQbasic.rdlc" />
+    <None Include="wwwroot\Reports\SubConDc.rdlc" />
+    <None Include="wwwroot\Reports\SubConMatDc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.Reporting" Version="2.1.0" />
+    <PackageReference Include="ClosedXML" Version="0.102.2" />
+    <PackageReference Include="Dapper" Version="2.0.143" />
+    <PackageReference Include="jsTree" Version="3.1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.0.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.VisualBasic" Version="4.0.1" />
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.WebForms" Version="150.1586.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
+    <PackageReference Include="NEST" Version="7.17.5" />
+    <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.100" />
+    <PackageReference Include="PdfSharp" Version="1.50.5147" />
+    <PackageReference Include="System.CodeDom" Version="7.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="APCShift.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>APCShift.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="APProduction.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>APProduction.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet3.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet4.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet5.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet6.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet7.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet8.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet9.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Pyro.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Pyro.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Return.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Return.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="SQ.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SQ.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="SubActMr.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SubActMr.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="SubConDc.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SubConDc.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="SubConDet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SubConDet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="SubMat.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SubMat.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="SubMatDet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SubMatDet.xsd</DependentUpon>
+    </Compile> 
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="wwwroot\Reports\Production.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\QuotationReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\Report1.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\SQuotationReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="APCShift.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>APCShift.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="APProduction.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>APProduction.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet4.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet5.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet6.Designer.cs</LastGenOutput>
+    </None>
+     <None Update="DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet7.Designer.cs</LastGenOutput>
+    </None>
+     <None Update="DataSet8.xsd">
+       <Generator>MSDataSetGenerator</Generator>
+       <LastGenOutput>DataSet8.Designer.cs</LastGenOutput>
+     </None>
+     <None Update="DataSet9.xsd">
+       <Generator>MSDataSetGenerator</Generator>
+       <LastGenOutput>DataSet9.Designer.cs</LastGenOutput>
+     </None>
+     <None Update="Pyro.xsd">
+       <Generator>MSDataSetGenerator</Generator>
+       <LastGenOutput>Pyro.Designer.cs</LastGenOutput>
+     </None>
+     <None Update="Return.xsd">
+       <Generator>MSDataSetGenerator</Generator>
+       <LastGenOutput>Return.Designer.cs</LastGenOutput>
+     </None>
+     <None Update="SQ.xsd">
+       <Generator>MSDataSetGenerator</Generator>
+       <LastGenOutput>SQ.Designer.cs</LastGenOutput>
+     </None>
+     <None Update="SubActMr.xsd">
+       <Generator>MSDataSetGenerator</Generator>
+       <LastGenOutput>SubActMr.Designer.cs</LastGenOutput>
+     </None>
+     <None Update="SubConDc.xsd">
+       <Generator>MSDataSetGenerator</Generator>
+       <LastGenOutput>SubConDc.Designer.cs</LastGenOutput>
+     </None>
+     <None Update="SubConDet.xsd">
+       <Generator>MSDataSetGenerator</Generator>
+       <LastGenOutput>SubConDet.Designer.cs</LastGenOutput>
+     </None>
+     <None Update="SubMat.xsd">
+       <Generator>MSDataSetGenerator</Generator>
+       <LastGenOutput>SubMat.Designer.cs</LastGenOutput>
+     </None>
+     <None Update="SubMatDet.xsd">
+       <Generator>MSDataSetGenerator</Generator>
+       <LastGenOutput>SubMatDet.Designer.cs</LastGenOutput>
+     </None>
+   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\js\vendor\editorsjs\" />
+    <Folder Include="wwwroot\pdfdownload\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="https://json.schemastore.org/artifacthub-repo.json" /></VisualStudio></ProjectExtensions>
+
+</Project>
