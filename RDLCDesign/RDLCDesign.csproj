@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="odac.client.x64" Version="1.112.3.20" />
+    <PackageReference Include="Oracle.DataAccess.x86.4" Version="4.112.3" />
+    <PackageReference Include="Oracle.ManagedDataAccess" Version="21.10.0" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.100" />
+    <PackageReference Include="System.Data.OracleClient" Version="1.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DataSet3.Designer.cs">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="ReceiptDataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ReceiptDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="RetDataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RetDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Returns.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Returns.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet4.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="ReceiptDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReceiptDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="RetDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RetDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Returns.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Returns.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
+</Project>
